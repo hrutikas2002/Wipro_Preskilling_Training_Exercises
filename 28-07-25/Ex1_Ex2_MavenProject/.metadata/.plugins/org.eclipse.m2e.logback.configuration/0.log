@@ -1,0 +1,64 @@
+2025-07-28 10:21:31,149 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-07-28 10:33:06,560 [Worker-1: Launching mavenrun-463094e5-08b4-4e65-aa81-81937f52fe83] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\rutik\Desktop\Wipro\Mockito
+2025-07-28 10:33:06,575 [Worker-1: Launching mavenrun-463094e5-08b4-4e65-aa81-81937f52fe83] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -DarchetypeVersion=1.1 -Dpackage=com.wiproA.mockitodemov -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DgroupId=" com.wiproA" -DartifactId=mockitodemov -DoutputDirectory=C:\Users\rutik\Desktop\Wipro\Mockito -Dversion=1.0 -Dstyle.color=always -U archetype:generate
+2025-07-28 10:34:45,962 [Worker-8: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\pom.xml
+2025-07-28 10:34:55,984 [Worker-8: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.wiproA:mockitodemov:1.0 @ C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\pom.xml.
+2025-07-28 10:34:58,418 [Worker-8: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mockitodemov/src/main/java
+2025-07-28 10:34:58,444 [Worker-8: Creating maven-archetype-quickstart] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /mockitodemov/src/test/java
+2025-07-28 10:34:58,986 [Worker-8: Creating maven-archetype-quickstart] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 13 sec
+2025-07-28 10:35:02,812 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:35:02,817 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:35:02,827 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:35:02,827 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:35:30,592 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:35:30,594 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:35:30,599 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:35:30,599 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:36:52,136 [Worker-8: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.wiproA:mockitodemov:1.0 @ C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\pom.xml.
+2025-07-28 10:36:52,902 [Worker-8: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mockito/mockito-core/5.16.1/mockito-core-5.16.1.pom
+2025-07-28 10:36:53,060 [Worker-8: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mockito/mockito-core/5.16.1/mockito-core-5.16.1.pom
+2025-07-28 10:36:53,527 [Worker-8: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mockito/mockito-core/5.16.1/mockito-core-5.16.1.jar
+2025-07-28 10:36:54,386 [Worker-8: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mockito/mockito-core/5.16.1/mockito-core-5.16.1.jar
+2025-07-28 10:36:55,919 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/mockito/mockito-core/5.16.1/mockito-core-5.16.1-sources.jar
+2025-07-28 10:36:56,315 [Worker-0: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/mockito/mockito-core/5.16.1/mockito-core-5.16.1-sources.jar
+2025-07-28 10:36:56,340 [Worker-0: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.mockito:mockito-core:5.16.1
+2025-07-28 10:36:56,807 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:36:56,827 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:36:56,844 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:36:56,845 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:37:00,359 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:37:00,359 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:37:00,368 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:37:00,368 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:37:27,871 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:37:27,873 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:37:27,878 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:37:27,878 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:37:43,707 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:37:43,707 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:37:43,713 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:37:43,713 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:38:13,592 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:38:13,592 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:38:13,596 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:38:13,596 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:38:27,773 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:38:27,773 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:38:27,779 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:38:27,781 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:38:46,615 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:38:46,616 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:38:46,621 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:38:46,622 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:38:49,635 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:38:49,635 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:38:49,641 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:38:49,642 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:39:02,158 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:39:02,159 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:39:02,163 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:39:02,164 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources
+2025-07-28 10:39:14,518 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:39:14,519 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\main\resources
+2025-07-28 10:39:14,523 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2025-07-28 10:39:14,523 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\rutik\Desktop\Wipro\Mockito\mockitodemov\src\test\resources

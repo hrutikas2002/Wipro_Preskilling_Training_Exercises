@@ -1,0 +1,21 @@
+package com.wiproA.mockitodemov;
+
+public class OrderServiceTest {
+	Test
+    public void testPlaceOrder() {
+        // Create a mock object
+        OrderService mockOrderService = mock(OrderService.class);
+
+        // Define behavior
+        when(mockOrderService.placeOrder("ORD-01")).thenReturn("successful");
+
+        // Call the method
+        String result = mockOrderService.placeOrder("ORD-01");
+
+        // Assert result
+        assertEquals("successful", result);
+
+        // Verify that method was called
+        verify(mockOrderService).placeOrder("ORD-01");
+    }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 
+		Reference: Property-based DI (Commented)
+		
+		<bean id="department" class="com.wipro.springcontext.SpringDepartment.beans.Department">
+			<property name="deptCode" value="CSE"/>
+			<property name="departmentName" value="Computer Science"/>
+		</bean>
+
+		<bean id="college" class="com.wipro.springcontext.SpringDepartment.beans.College">
+			<property name="collegeName" value="PVGCOE Nashik"/>
+			<property name="department" ref="department"/>
+		</bean>
+	-->
+
+	<!-- Department Bean using constructor -->
+	<bean id="department" class="com.wipro.springcontext.SpringDepartment.beans.Department">
+		<constructor-arg value="CSE"/>
+		<constructor-arg value="Computer Science"/>
+	</bean>
+
+	<!-- College Bean using constructor-based injection -->
+	<bean id="college" class="com.wipro.springcontext.SpringDepartment.beans.College">
+		<constructor-arg value="PVGCOE Nashik"/>
+		<constructor-arg ref="department"/>
+	</bean>
+
+</beans>
