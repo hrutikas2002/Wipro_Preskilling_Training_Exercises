@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semantic Tags Layout in Table</title>
+</head>
+<body>
+
+<table border="1" width="100%" cellspacing="0" cellpadding="20">
+    <!-- Header -->
+    <tr>
+        <td colspan="3" align="center">
+            <header>&lt;header&gt;</header>
+        </td>
+    </tr>
+
+    <!-- Navigation -->
+    <tr>
+        <td colspan="3" align="center">
+            <nav>&lt;nav&gt;</nav>
+        </td>
+    </tr>
+
+    <!-- Main Content Row -->
+    <tr>
+        <!-- Aside -->
+        <td width="20%" align="center">
+            <aside>&lt;aside&gt;</aside>
+        </td>
+
+        <!-- Main -->
+        <td colspan="2">
+            <main>
+                <table border="1" width="100%" cellspacing="0" cellpadding="10">
+                    <!-- Article -->
+                    <tr>
+                        <td align="center">
+                            <article>
+                                &lt;article&gt;
+                                <table border="1" width="100%" cellspacing="0" cellpadding="10">
+                                    <tr>
+                                        <td align="center">
+                                            <figure>&lt;figure&gt;</figure>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <p>&lt;p&gt;</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </article>
+                        </td>
+                    </tr>
+                    <!-- Section -->
+                    <tr>
+                        <td align="center">
+                            <section>&lt;section&gt;</section>
+                        </td>
+                    </tr>
+                </table>
+            </main>
+        </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+        <td colspan="3" align="center">
+            <footer>&lt;footer&gt;</footer>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
