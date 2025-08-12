@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post - Bootstrap Version</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <style>
+    .hero {
+      background: url('background.png') center / cover no-repeat;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-weight: bold;
+    }
+    .about-author img {
+      border-radius: 50%;
+    }
+    section img {
+      max-width: 300px;
+      height: auto;
+      border: 2px solid #333;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Rutika's Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Posts</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>End-to-End Excellence with Full-Stack Java</h1>
+      <p class="lead">By Rutika Suryavanshi | August 12, 2025</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container my-4">
+    <div class="row">
+
+      <!-- Blog Content -->
+      <div class="col-lg-8 mb-4">
+        <p class="lead">
+          Full-stack Java development empowers you to build complete applications—from engaging frontends to powerful backends. Mastering it opens doors to endless career opportunities and innovation.
+        </p>
+
+        <section class="mb-4">
+          <h2>Work Across the Stack</h2>
+          <p>As a full-stack Java developer, you’re not limited to one part of the application. You can design and build attractive, user-friendly interfaces while also writing the backend logic that powers them.</p>
+          <img src="javaintro.jpg" alt="Fullstack Java" class="img-fluid">
+        </section>
+
+        <section class="mb-4">
+          <h2>High Industry Demand</h2>
+          <p>Businesses today prefer developers who can handle projects from start to finish without relying heavily on separate teams for frontend and backend.</p>
+          <img src="jobs.jpeg" alt="Jobs" class="img-fluid">
+        </section>
+
+        <section>
+          <h2>Strong Problem-Solving Skills</h2>
+          <p>Working across both frontend and backend exposes you to a variety of challenges, from optimizing user experience to improving database performance.</p>
+          <img src="problemsolving.jpeg" alt="Problem Solving" class="img-fluid">
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="col-lg-4">
+        <div class="card mb-4 p-3 text-center about-author">
+          <img src="author.jpeg" alt="Author" class="img-fluid mb-3" width="150">
+          <h3>About the Author</h3>
+          <p>A passionate fresher in Computer Engineering with skills in Java Full-Stack development.</p>
+          <div>
+            <a href="#">Twitter</a> | <a href="#">Instagram</a>
+          </div>
+        </div>
+
+        <div class="card p-3">
+          <h3>Recent Posts</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Understanding REST APIs</a></li>
+            <li><a href="#">Getting Started with Database</a></li>
+            <li><a href="#">A Beginner’s Guide to Microservices Architecture</a></li>
+            <li><a href="#">Best Practices and Common Mistakes while coding</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 MyBlog. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-white">Facebook</a> | 
+      <a href="#" class="text-white">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

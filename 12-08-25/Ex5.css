@@ -1,0 +1,30 @@
+/* universal selector*/
+* {
+    color: gray;
+}
+
+/* Group selector: h1 and h2 */
+h1,h2 {
+    color: blue;
+    text-align: center;
+}
+
+/* Class selector */
+.para{
+    color: orange;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* ID selector */
+#p2 {
+    color: red;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+/* Another style for h2 to test overriding */
+h2 {
+    color: green;
+    /* This will override blue from group selector */
+}

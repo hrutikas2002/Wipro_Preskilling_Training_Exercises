@@ -25,7 +25,7 @@ public class UserController {
 
     private final String SECRET_KEY = "mySecretKey";
 
-    @PostMapping("login")
+    @PostMapping("/login")
 	public User login(@RequestParam("user") String username, @RequestParam("password") String pwd) {
 		
 		//check in the db for the user id and password combination

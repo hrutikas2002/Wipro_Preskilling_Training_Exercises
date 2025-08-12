@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #6bd1d1;
+  }
+
+  /* Main flex container */
+  .container {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* Each card */
+  .card {
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    border: 2px solid #000000;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  /* Items inside each card */
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .item {
+    width: calc(50% - 10px);
+    text-align: center;
+  }
+
+  .item img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .item p {
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #0073e6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }

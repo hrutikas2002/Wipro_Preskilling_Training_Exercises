@@ -1,0 +1,76 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Navbar */
+nav {
+    background-color: #22223b;
+    padding: 1rem;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+nav a:hover {
+    color: yellow;
+}
+
+/* Banner */
+.banner {
+    background-color: #c9ada7;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #22223b(219, 147, 14);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    background-color: #f2e9e4;
+}
+
+/* Product grid */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.product {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 5px;
+}
+.product img {
+    width: 100%;
+    height: auto;
+}
+.product h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+.product p {
+    color: green;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #22223b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
