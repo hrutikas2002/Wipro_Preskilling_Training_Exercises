@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+
+    <script>
+
+        let person = {
+            name: "Srushti",
+            age: 12,
+            city: "Banglore",
+        };
+
+        var listPerson = [
+            {
+                name: "Yash",
+                age: 30,
+                city: "Pune",
+            },
+            {
+                name: "Rutika Suryavanshi",
+                age: 32,
+                city: "Nashik",
+            },
+            {
+                name: "Vedant",
+                age: 15,
+                city: "Dhule",
+            },
+            {
+                name: "Rajashree Nikam",
+                age: 25,
+                city: "Malegaon",
+            },
+        ];
+
+        listPerson.push(person);
+
+        const eligibleVoters = listPerson.filter(p => p.age >= 18);
+
+        for (let i = 0; i < eligibleVoters.length; i++) {
+            console.log(eligibleVoters[i]);
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

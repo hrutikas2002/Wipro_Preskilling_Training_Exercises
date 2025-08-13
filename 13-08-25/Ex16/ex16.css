@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    background-color: rgb(197, 190, 190);
+}
+
+img {
+    width: 500px;
+    height: 350px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+}   

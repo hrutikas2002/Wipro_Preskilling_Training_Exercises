@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8</title>
+
+    <script>
+        const employees = [
+            {
+                name: "Yash",
+                role: "Manager",
+                empId: 101,
+                salary: 75000
+            },
+            {
+                name: "Dipti",
+                role: "Developer",
+                empId: 102,
+                salary: 55000
+            },
+            {
+                name: "Aditya",
+                role: "Manager",
+                empId: 103,
+                salary: 82000
+            },
+            {
+                name: "Rutika",
+                role: "QA",
+                empId: 104,
+                salary: 48000
+            },
+            {
+                name: "Nitish",
+                role: "Manager",
+                empId: 105,
+                salary: 90000
+            }
+        ];
+
+        // Step 1: Filter only managers
+        const managers = employees.filter(emp => emp.role === "Manager");
+
+        // Step 2: Calculate total salary of managers
+        const totalManagerSalary =
+            managers.reduce((total, emp) => total + emp.salary, 0);
+
+        // Output
+        console.log("Managers list:", managers);
+        console.log("Total salary of all managers:", totalManagerSalary);
+
+    </script>
+</head>
+
+<body>
+<h4>sum Salary of all Managers</h4>
+</body>
+
+</html>
