@@ -1,0 +1,26 @@
+<!-- Ex11: Create a function separateFirstRest that takes any number of arguments using the rest operator. 
+ It should return an object with first (the first argument) and rest (an array of remaining arguments). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex11</title>
+    <script>
+        function separateFirstRest(...arguments) {
+            const [first, ...rest] = arguments;
+            return { first, rest };
+        }
+
+        console.log(separateFirstRest(10,20,30,40,50));
+        console.log(separateFirstRest("Rutika","Yash","Dipti","Aditya","Srushti"));
+    </script>
+</head>
+
+<body>
+    Seperate out first and rest arguments
+</body>
+
+</html>

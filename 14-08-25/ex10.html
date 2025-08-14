@@ -1,0 +1,25 @@
+<!-- Ex10: Write a function sumNumbers using the rest operator to take any number of arguments and return their sum. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex10</title>
+    <script>
+        function sumNumbers(...numbers) {
+            return numbers.reduce((total, num) => total + num, 0);
+        }
+
+        console.log(sumNumbers(1, 2, 3, 4, 5));       
+        console.log(sumNumbers(10, 20, 30, 40)); 
+
+    </script>
+</head>
+
+<body>
+    <h2>Sum of any number of elements.</h2>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Exercise 1</title>
+
+    <script>
+        const numbers = [10, 20, 30, 40, 50]
+
+        // const sumArray = arr => {
+        //     let total = 0;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         total += arr[i];
+        //     }
+        //     return total;
+        // };
+
+        const sumArray = arr => arr.reduce((total, num) => total + num, 0);
+
+        console.log(sumArray(numbers)); 
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

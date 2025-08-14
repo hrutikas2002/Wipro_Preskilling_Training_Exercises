@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4</title>
+</head>
+<script>
+    class BankAccount {
+        constructor(accountNum, balance) {
+            this.accountNum = accountNum;
+            this.balance = balance;
+        }
+
+        deposit(amount) {
+            this.balance += amount;
+            console.log("Balance after deposit of " + amount + ": " + this.balance);
+        }
+
+        withdraw(amount) {
+            if (this.balance >= amount) {
+                this.balance -= amount;
+                console.log("Balance after withdraw of " + amount + ": " + this.balance);
+            } else {
+                console.log("Insufficient balance to withdraw " + amount);
+            }
+        }
+    }
+
+    const b1 = new BankAccount(12345, 5000);
+    b1.deposit(5000);
+    b1.withdraw(2000);
+</script>
+<body>
+    <h3>Exercise 4</h3>
+</body>
+</html>

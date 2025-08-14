@@ -1,0 +1,23 @@
+<!-- Ex7:Use the spread operator to merge two objects, obj1 and obj2, into a new object mergedObj. 
+ obj1 = { a: 1, b: 2 } and obj2 = { b: 3, c: 4 }. What will be the value of mergedObj? -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+
+    <script>
+        const  obj1 = { a: 1, b: 2 }
+        const obj2 = { b: 3, c: 4 }
+
+        const mergedObj = {...obj1, ...obj2};
+
+        console.log(mergedObj);
+    </script>
+</head>
+<body>
+    <h2>Spread Operator to merge two objects</h2>
+</body>
+</html>

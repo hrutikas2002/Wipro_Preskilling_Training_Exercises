@@ -1,0 +1,25 @@
+<!-- Ex8: Use the spread operator to create a new array newArr by combining 
+arr1 = [1, 2, 3] and arr2 = [4, 5, 6] in between some additional elements. 
+E.g[4,5,<content of arr1>,6,7, ,<content of arr2>,8,9] -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex8</title>
+    <script>
+        const arr1 = [1, 2, 3];
+        const arr2 = [4, 5, 6];
+
+        const combineArr = [4, 5, ...arr1, 6, 7, ...arr2, 8, 9];
+        console.log(combineArr); 
+    </script>
+</head>
+
+<body>
+    <h3>spread operator to create a new array!</h3>
+</body>
+
+</html>

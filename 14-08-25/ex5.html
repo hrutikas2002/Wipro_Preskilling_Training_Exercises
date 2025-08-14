@@ -1,0 +1,54 @@
+<!-- Ex5: Create an ES6 class Vehicle with:
+A constructor taking make, model, and year.
+A method getInfo() returning a string with make, model, and year.
+Extend Vehicle with a subclass Car that adds a numDoorsproperty and overrides getInfo() to include numDoors. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5</title>
+</head>
+<script>
+    // Base class
+    class Vehicle {
+        constructor(make, model, year) {
+            this.make = make;
+            this.model = model;
+            this.year = year;
+        }
+
+        getInfo() {
+            return `Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`;
+        }
+    }
+
+    // Subclass
+    class Car extends Vehicle {
+        constructor(make, model, year, numDoors) {
+            super(make, model, year);
+            this.numDoors = numDoors;
+        }
+
+        // Override getInfo
+        getInfo() {
+            return `${super.getInfo()}, Doors: ${this.numDoors}`;
+        }
+    }
+
+    // Example usage
+    const vehicle1 = new Vehicle("Maruti", "WagonR", 2020);
+    console.log(vehicle1.getInfo());
+
+    const car1 = new Car("Maruti", "Swift", 2021, 4);
+    console.log(car1.getInfo());
+    
+</script>
+
+<body>
+
+</body>
+
+</html>
