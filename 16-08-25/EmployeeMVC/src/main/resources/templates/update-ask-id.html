@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>update employee by id</title>
+</head>
+<body>
+	<form th:action="@{/employees/update}" method="post">
+    Enter Employee ID: <input type="number" name="id" /> <br/>
+    <button type="submit">Update</button>
+</form>
+<p th:text="${message}"></p>
+	
+</body>
+</html>

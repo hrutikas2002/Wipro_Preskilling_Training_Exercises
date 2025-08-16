@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/employees/add}" th:object="${employee}" method="post">
+    Name: <input type="text" th:field="*{name}" /><br/>
+    Email: <input type="email" th:field="*{email}" /><br/>
+    Contract: <input type="text" th:field="*{contractType}" /><br/>
+
+    Department:
+    <select th:field="*{department}" th:object="${employee}">
+        <option th:each="dept : ${departments}" 
+                th:value="${dept.id}" 
+                th:text="${dept.name}"></option>
+    </select><br/>
+    
+    <h3>Address Details</h3>
+    Street: <input type="text" th:field="*{address.street}" /><br/>
+    City: <input type="text" th:field="*{address.city}" /><br/>
+    State: <input type="text" th:field="*{address.state}" /><br/>
+    Pincode: <input type="text" th:field="*{address.pincode}" /><br/>
+
+    <button type="submit">Add Employee</button>
+</form>
+	
+</body>
+</html>

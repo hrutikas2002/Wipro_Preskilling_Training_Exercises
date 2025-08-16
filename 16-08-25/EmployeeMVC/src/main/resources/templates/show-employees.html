@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>show Employees</title>
+</head>
+<body>
+<a th:href="@{/employees/}">
+    <button type="button">Home</button>
+</a>
+	<table>
+    <tr>
+        <th>ID</th><th>Name</th><th>Email</th><th>Contract</th>
+    </tr>
+    <tr th:each="emp : ${employees}">
+        <td th:text="${emp.id}"></td>
+        <td th:text="${emp.name}"></td>
+        <td th:text="${emp.email}"></td>
+        <td th:text="${emp.contractType}"></td>
+    </tr>
+</table>
+	
+</body>
+</html>
