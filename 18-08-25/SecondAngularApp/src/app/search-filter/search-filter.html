@@ -1,0 +1,9 @@
+
+<input type="text" placeholder="Search names..." (input)="onSearch($event)">
+<br>
+<!-- Listbox -->
+<select size="5" style="width:200px; margin-top:10px;">
+  @for (n of filteredNames; track n) {
+    <option>{{ n }}</option>
+  }
+</select>

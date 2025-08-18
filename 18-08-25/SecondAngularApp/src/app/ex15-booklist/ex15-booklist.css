@@ -1,0 +1,17 @@
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 books in one row */
+  gap: 20px; /* spacing between books */
+  padding: 10px;
+}
+
+.book-card {
+  background: #f4f4f4;
+  padding: 10px;
+  text-align: center;
+}
+.book-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}

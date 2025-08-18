@@ -1,0 +1,11 @@
+<select [disabled]="loadedCountries.length === 0">
+  @if (loadedCountries.length === 0) {
+    <option disabled selected>-- No countries loaded --</option>
+  }
+  @for (c of loadedCountries; track c) {
+    <option [value]="c">{{ c }}</option>
+  }
+</select>
+<br><br>
+<button (click)="ShowContries()" type="button">load</button>
+

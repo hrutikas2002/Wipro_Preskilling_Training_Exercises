@@ -1,0 +1,10 @@
+<label for="">
+    <input type="checkbox" (change)="toggleMessage()">Show Message
+</label>
+
+@if(showMessage){
+    <p>Hello! Welcome to Angular World</p>
+}
+@else{
+    <p>Message is hidden. Click on checkbox to see the message.</p>
+}

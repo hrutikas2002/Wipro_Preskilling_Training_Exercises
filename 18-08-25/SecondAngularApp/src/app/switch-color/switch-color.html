@@ -1,0 +1,30 @@
+<select [(ngModel)]="selectedColor">
+  <option value="" disabled selected>-- Select a color --</option>
+  @for (c of colors; track c) {
+    <option [value]="c">{{ c }}</option>
+  }
+</select>
+
+<!-- Text with @switch -->
+<div style="margin-top: 10px; font-size: 20px;">
+  @switch (selectedColor) {
+    @case ('red') {
+      <p style="color:red;">This is Red Text</p>
+    }
+    @case ('blue') {
+      <p style="color:blue;">This is Blue Text</p>
+    }
+    @case ('green') {
+      <p style="color:green;">This is Green Text</p>
+    }
+    @case ('orange') {
+      <p style="color:orange;">This is Orange Text</p>
+    }
+    @case ('purple') {
+      <p style="color:purple;">This is Purple Text</p>
+    }
+    @default {
+      <p style="color:black;">Please select a color</p>
+    }
+  }
+</div>
