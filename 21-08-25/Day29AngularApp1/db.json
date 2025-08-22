@@ -1,0 +1,32 @@
+{
+  "vehicles": [
+    {
+      "id": 5,
+      "make": "Hyundai",
+      "fuelType": "CNG",
+      "model": "i20",
+      "price": 900000
+    },
+    {
+      "id": 1,
+      "make": "Tata",
+      "fuelType": "Petrol",
+      "model": "SUV",
+      "price": 6000000
+    },
+    {
+      "id": 2,
+      "make": "Honda",
+      "fuelType": "Diesel",
+      "model": "Civic",
+      "price": 150000000
+    },
+    {
+      "id": "11",
+      "make": "Tata",
+      "fuelType": "CNG",
+      "model": "SUV",
+      "price": 150000000
+    }
+  ]
+}

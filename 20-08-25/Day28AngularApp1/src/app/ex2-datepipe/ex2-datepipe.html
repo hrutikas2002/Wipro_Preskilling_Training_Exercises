@@ -1,0 +1,11 @@
+<div >
+  <h2>DatePipe</h2>
+
+  <input type="date" [(ngModel)]="selectedDate" />
+
+@if (selectedDate) {
+  <p>
+    Selected Date: {{ selectedDate | date:'short' }}
+  </p>
+}
+</div>

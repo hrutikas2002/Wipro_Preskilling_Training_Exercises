@@ -1,0 +1,9 @@
+<div>
+  <h2>Custom Pipe: Celsius to Fahrenheit</h2>
+
+  <input type="number" [(ngModel)]="tempC" placeholder="Enter °C" />
+
+  @if (tempC) {
+    <p>Converted: {{ tempC | ctof }}</p>
+  }
+</div>

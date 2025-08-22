@@ -1,0 +1,12 @@
+<div>
+  <h2>Task Manager</h2>
+
+  <!-- Task Component for adding task -->
+  <app-ex8-task (taskAdded)="addTask($event)"></app-ex8-task>
+
+  <!-- Task List Component to show tasks -->
+  <app-ex8-task-list 
+      [tasks]="tasks" 
+      (taskDeleted)="deleteTask($event)">
+  </app-ex8-task-list>
+</div>

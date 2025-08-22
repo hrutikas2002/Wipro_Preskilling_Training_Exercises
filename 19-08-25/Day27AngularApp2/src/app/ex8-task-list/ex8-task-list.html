@@ -1,0 +1,24 @@
+<table border="1px" width="100%" class="tasktable">
+    <tr>
+        <th>ID</th>
+        <th>Task Description</th>
+        <th>Category</th>
+        <th>Action</th>
+    </tr>
+
+    @for (task of tasks; track task.id) {
+    <tr>
+        <td>{{ task.id }}</td>
+        <td>{{ task.description }}</td>
+        <td>{{ task.category }}</td>
+        <td>
+            <button (click)="deleteTask(task.id)">Delete</button>
+        </td>
+    </tr>
+    }
+
+</table>
+
+<p *ngIf="deleteMessage" style="color:red; margin-top:10px;">
+    {{ deleteMessage }}
+</p>

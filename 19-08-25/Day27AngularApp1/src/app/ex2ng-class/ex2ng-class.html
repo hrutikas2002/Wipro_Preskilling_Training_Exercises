@@ -1,0 +1,17 @@
+<h2>ngClass with Bold Red and Italic</h2>
+
+<!-- String -->
+<p [ngClass]="'bold-red'">This is BOLD RED using STRING.</p>
+
+<!-- Array -->
+<p [ngClass]="['bold-red', 'italic']">
+  This is BOLD RED + ITALIC using ARRAY.
+</p>
+
+<!-- Object -->
+<p [ngClass]="{ 'bold-red': isBoldRed, 'italic': isItalic }">
+  This is conditional OBJECT based styling.
+</p>
+
+<button (click)="isBoldRed = !isBoldRed">Toggle Bold Red</button>
+<button (click)="isItalic = !isItalic">Toggle Italic</button>

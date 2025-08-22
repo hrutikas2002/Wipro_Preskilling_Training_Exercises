@@ -1,0 +1,37 @@
+<h2>Vehicle List</h2>
+
+@for (vehicle of vehicles; track vehicle.id) {
+<div class="vehicle-card">
+    <p>Make: {{ vehicle.id }}-Make: {{ vehicle.make }} - Model: {{ vehicle.model }} - Fuel Type: {{ vehicle.fuelType }}- Price: {{
+        vehicle.price }}</p>
+
+    <button (click)="edit(vehicle.id!)">Edit</button>
+    <button (click)="delete(vehicle.id!)">Delete</button>
+</div>
+} @empty {
+<p>No vehicles found!</p>
+}
+
+
+<!-- Add Vehicle Form -->
+<div>
+    <h3>Add Vehicle</h3>
+    <input placeholder="id" [(ngModel)]="vehicleAdd.id">
+    <input placeholder="Make" [(ngModel)]="vehicleAdd.make">
+    <input placeholder="Model" [(ngModel)]="vehicleAdd.model">
+    <input placeholder="Fuel Type" [(ngModel)]="vehicleAdd.fuelType">
+    <input type="number" placeholder="Price" [(ngModel)]="vehicleAdd.price">
+    <button (click)="save()">Save Vehicle</button>
+</div>
+
+<!-- Edit Vehicle Form -->
+<div>
+    <h3>Edit Vehicle</h3>
+    <input placeholder="id" [(ngModel)]="vehicleEdit.id">
+    <input placeholder="Make" [(ngModel)]="vehicleEdit.make">
+    <input placeholder="Model" [(ngModel)]="vehicleEdit.model">
+    <input placeholder="Fuel Type" [(ngModel)]="vehicleEdit.fuelType">
+    <input type="number" placeholder="Price" [(ngModel)]="vehicleEdit.price">
+    <button (click)="update()">Update Vehicle</button>
+
+</div>

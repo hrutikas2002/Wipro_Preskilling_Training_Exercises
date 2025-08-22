@@ -1,0 +1,17 @@
+<!-- <div class="card mb-3">
+  <img [src]="image" class="card-img-top" alt="{{title}}">
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{description}}</p>
+  </div>
+</div> -->
+
+
+<div class="card mb-4 shadow-sm">
+  <img [src]="fruit.image" class="card-img-top" alt="{{fruit.title}}">
+  <div class="card-body">
+    <h5 class="card-title">{{fruit.title}}</h5>
+    <p class="card-text">{{fruit.description}}</p>
+    <button class="btn btn-danger" (click)="onRemove()">Remove</button>
+  </div>
+</div>

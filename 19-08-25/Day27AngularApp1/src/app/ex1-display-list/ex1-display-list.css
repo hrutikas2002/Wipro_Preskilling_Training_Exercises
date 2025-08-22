@@ -1,0 +1,18 @@
+.fruit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 5 books in one row */
+  gap: 20px; /* spacing between books */
+  padding: 10px;
+}
+
+.fruit-card {
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.fruit-card img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 5px;
+}

@@ -1,0 +1,28 @@
+<!-- @for (fruit of fruits; track $index) {
+<app-ex5-fruits [title]="fruit.title" [description]="fruit.description" [image]="fruit.image">
+</app-ex5-fruits>
+} -->
+
+
+<!-- <h2 class="text-center mt-3">Fruit List</h2>
+<div class="row">
+  @for (fruit of fruits; track fruit.title) {
+    <div class="col-md-4">
+      <app-ex5-fruits
+        [title]="fruit.title"
+        [image]="fruit.image"
+        [description]="fruit.description">
+      </app-ex5-fruits>
+    </div>
+  }
+</div> -->
+
+<h2 class="text-center mt-3">Fruit List</h2>
+<div class="row">
+  @for (fruit of fruits; track fruit.title) {
+    <div class="col-md-3">
+      <app-ex5-fruits [fruit]="fruit" (remove)="removeFruit($event)"></app-ex5-fruits>
+    </div>
+  }
+</div>
+

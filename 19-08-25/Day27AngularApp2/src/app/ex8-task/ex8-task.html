@@ -1,0 +1,18 @@
+<div>
+    <input type="text" [(ngModel)]="description" placeholder="Enter task description" />
+    <br>
+    <select [(ngModel)]="category">
+      <option value="Work">Work</option>
+      <option value="Study">Study</option>
+      <option value="Exercise">Exercise</option>
+      <option value="Entertainment">Entertainment</option>
+      <option value="Personal">Personal</option>
+      <option value="Other">Other</option>
+    </select>
+    <br>
+    <button (click)="addTask()">Add Task</button>
+  
+  <p *ngIf="addMessage" style="color:green; margin-top:10px;">
+    {{ addMessage }}
+  </p>
+</div>

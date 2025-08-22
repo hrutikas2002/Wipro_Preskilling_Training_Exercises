@@ -1,0 +1,29 @@
+div{
+    border: 1px solid #5e5b5b;
+    padding: 20px;
+    width: 600px;
+    margin: 20px auto;
+    
+}
+
+input {
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+p {
+    color: green;
+    margin-top: 10px;
+    text-align: center;
+}
