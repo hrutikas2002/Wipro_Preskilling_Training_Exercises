@@ -1,0 +1,51 @@
+<!-- Add validation and error messages in your form. Disable the submit button until all validations are passed. -->
+
+<form [formGroup]="fg" (ngSubmit)="onSubmit()" style="margin-top: 50px;">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" placeholder="Enter your name" />
+        @if(fg.controls['name'].invalid && (fg.controls['name'].touched || fg.controls['name'].dirty))
+        {
+        <mat-error>Name is required</mat-error>
+        }
+    </mat-form-field>
+
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Enter your email">
+        @if(fg.controls['email'].invalid && (fg.controls['email'].touched || fg.controls['email'].dirty))
+        {
+        <mat-error>Enter a valid email</mat-error>
+        }
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dob" placeholder="Choose date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        @if(fg.controls['dob'].invalid && (fg.controls['dob'].touched || fg.controls['dob'].dirty))
+        {
+        <mat-error>Date of Birth is required</mat-error>
+        }
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Subject of Study</mat-label>
+        <mat-select formControlName="subject">
+            @for (sub of subjects; track sub) {
+            <mat-option [value]="sub">{{ sub }}</mat-option>
+            }
+        </mat-select>
+        @if(fg.controls['subject'].invalid && (fg.controls['subject'].touched || fg.controls['subject'].dirty))
+        {
+        <mat-error>Subject is required</mat-error>
+        }
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" type="submit" [disabled]="fg.invalid">Submit</button>
+</form>
