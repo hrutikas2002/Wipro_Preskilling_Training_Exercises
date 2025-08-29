@@ -1,5 +1,27 @@
-<div class="home">
-  <h1>Welcome</h1>
-  <button (click)="goToRegister()">Register</button>
-  <button (click)="goToLogin()">Login</button>
+<div class="container text-center mt-5">
+  <h1 class="mb-4">Welcome to Our Application</h1>
+
+  <div class="row justify-content-center">
+    <!-- Register Card -->
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-lg border-0">
+        <div class="card-body">
+          <h4 class="card-title">New User?</h4>
+          <p class="card-text">Join us today and explore amazing features.</p>
+          <button class="btn btn-success btn-lg w-100" (click)="goToRegister()">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Card -->
+    <div class="col-md-4 mb-3">
+      <div class="card shadow-lg border-0">
+        <div class="card-body">
+          <h4 class="card-title">Already a Member?</h4>
+          <p class="card-text">Login and continue your journey with us.</p>
+          <button class="btn btn-primary btn-lg w-100" (click)="goToLogin()">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
