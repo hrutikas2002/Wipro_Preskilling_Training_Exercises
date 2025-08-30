@@ -1,0 +1,21 @@
+<div class="order-history-container" id="orderHistoryContainer">
+  <h2 class="order-history-title" id="orderHistoryTitle">Order History</h2>
+  <table class="order-history-table" id="orderHistoryTable" border="1">
+    <tr>
+      
+      <th>Product Name</th>
+      <th>Purchased Qty</th>
+      <th>Order Date</th>
+    </tr>
+    @for (order of orders; track order) {
+      <tr>
+        <td>{{ order.productName }}</td>
+        <td>{{ order.purchasedQty }}</td>
+        <td>{{ order.orderDate }}</td>
+      </tr>
+    }
+  </table>
+  <button class="home-button" id="homeButton" (click)="goHome()">Home</button>
+</div>
+
+

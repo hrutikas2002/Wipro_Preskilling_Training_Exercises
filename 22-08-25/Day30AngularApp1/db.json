@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 55000
+    },
+    {
+      "id": "2",
+      "name": "Table",
+      "category": "Furniture",
+      "price": 7500
+    },
+    {
+      "id": "d30c",
+      "name": "Charger",
+      "category": "Electronics",
+      "price": 1500
+    },
+    {
+      "id": "b781",
+      "name": "Shirt",
+      "category": "clothing",
+      "price": 800
+    },
+    {
+      "id": "b567",
+      "name": "Notebook",
+      "category": "Stationary",
+      "price": 300
+    },
+    {
+      "id": "0e67",
+      "name": "Cooker",
+      "category": "utility",
+      "price": 4500
+    },
+    {
+      "id": "42cd",
+      "name": "Calpol500",
+      "category": "Medicine",
+      "price": 10
+    }
+  ]
+}

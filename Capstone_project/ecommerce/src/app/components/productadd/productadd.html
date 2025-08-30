@@ -1,0 +1,14 @@
+<h2>Add Product</h2>
+<form (ngSubmit)="addProduct()">
+  <input [(ngModel)]="product.prodName" name="prodName" placeholder="Product Name" required>
+  <input [(ngModel)]="product.prodDesc" name="prodDesc" placeholder="Description" required>
+  <input [(ngModel)]="product.prodCat" name="prodCat" placeholder="Category" required>
+  <input [(ngModel)]="product.make" name="make" placeholder="Make" required>
+  <input type="number" [(ngModel)]="product.availableQty" name="availableQty" placeholder="Available Quantity" required>
+  <input type="number" [(ngModel)]="product.price" name="price" placeholder="Price" required>
+  <input [(ngModel)]="product.uom" name="uom" placeholder="Unit of Measurement" required>
+  <input type="number" [(ngModel)]="product.prodRating" name="prodRating" placeholder="Rating" step="0.1" required>
+  <input [(ngModel)]="product.imageURL" name="imageURL" placeholder="Image URL" required>
+  <input type="date" [(ngModel)]="product.dateOfManufacture" name="dateOfManufacture" placeholder="Date of Manufacture" required>
+  <button type="submit">Add Product</button>
+</form>

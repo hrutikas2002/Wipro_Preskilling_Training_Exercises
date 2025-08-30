@@ -1,0 +1,27 @@
+<div class="purchase-form">
+  <h2>Place an Order</h2>
+
+  <label for="product">Select Product:</label>
+  <select [(ngModel)]="selectedProductId" name="product" (change)="onProductSelect()">
+    @for (p of products; track p.id) {
+      <option [value]="p.id">{{ p.name }} (Available: {{ p.qty }})</option>
+    }
+  </select>
+
+  <div>
+    <label for="qty">Purchase Quantity:</label>
+    <input type="number" [(ngModel)]="purchaseQty" name="qty">
+  </div>
+
+  <button (click)="placeOrder()">Place Order</button>
+
+  @if (errorMessage) {
+    <p style="color:red;">{{ errorMessage }}</p>
+  }
+
+  @if (successMessage) {
+    <p style="color:rgb(14, 197, 62);">{{ successMessage }}</p>
+  }
+
+<button (click)="goHome()">Home</button>
+</div>

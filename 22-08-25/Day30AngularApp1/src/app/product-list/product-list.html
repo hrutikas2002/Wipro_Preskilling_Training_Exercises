@@ -1,0 +1,19 @@
+<div class="product-list">
+  <button (click)="addProduct()">Add product</button>
+
+  <button (click)="order()">Order</button>
+
+  <button (click)="orderHistory()">Order History</button>
+
+  @for (product of products; track $index) {
+    <div class="product-info">
+      <h3 class="product-id">{{ product.id }}</h3>
+      <h3 class="product-name">{{ product.name }}</h3>
+      <h3 class="product-category">{{ product.category }}</h3>
+      <h3 class="product-price">{{ product.price }}</h3>
+      <h3 class="product-qty">In Stock: {{ product.qty }}</h3>
+      <button><a [routerLink]="['/productedit', product.id]">Edit</a></button>
+      <button><a [routerLink]="['/productdelete', product.id]">Delete</a></button>
+    </div>
+}
+</div>    

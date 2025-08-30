@@ -29,7 +29,7 @@ export class Login {
 
         if (decoded) {
           if (decoded.role === "ROLE_ADMIN") {
-            this.router.navigate(['/admin-dashboard']);
+            this.router.navigate(['/products']);
           } else {
             this.router.navigate(['/user-dashboard']);
           }

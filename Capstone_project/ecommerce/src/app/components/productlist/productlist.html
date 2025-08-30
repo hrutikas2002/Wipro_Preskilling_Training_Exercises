@@ -1,0 +1,41 @@
+<h2>Products</h2>
+<button routerLink="/add-product">Add Product</button>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Make</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>UOM</th>
+    <th>Rating</th>
+    <th>Image</th>
+    <th>Date of Manufacture</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let product of products">
+    <td>{{ product.prodName }}</td>
+    <td>{{ product.prodDesc }}</td>
+    <td>{{ product.prodCat }}</td>
+    <td>{{ product.make }}</td>
+    <td>{{ product.availableQty }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.uom }}</td>
+    <td>{{ product.prodRating }}</td>
+    <td>
+      <img *ngIf="product.imageURL" [src]="product.imageURL" alt="Image" width="50">
+    </td>
+    <td>{{ product.dateOfManufacture }}</td>
+    <td>
+      <!-- <button [routerLink]="['/update-product', product.id]">Update</button> -->
+      <button (click)="deleteProduct(product.id!)">Delete</button>
+    </td>
+  </tr>
+
+  <tr *ngIf="products.length === 0">
+    <td colspan="11">No products found.</td>
+  </tr>
+</table>

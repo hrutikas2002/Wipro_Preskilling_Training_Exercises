@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+}
+
+.product-list {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header buttons */
+.product-list > button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.product-list > button:hover {
+  background-color: #0056b3;
+}
+
+/* Grid layout for cards */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Make buttons span full width */
+.product-list > button {
+  grid-column: 1 / -1;
+  width: fit-content;
+}
+
+/* Product cards */
+.product-info {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.product-info h3 {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.product-name {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  margin-bottom: 10px !important;
+}
+
+.product-price {
+  color: #28a745;
+  font-weight: bold !important;
+}
+
+.product-price::before {
+  content: '₹';
+}
+
+/* Action buttons */
+.product-info button {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.product-info button:hover {
+  background-color: #e9ecef;
+}
+
+.product-info button a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
