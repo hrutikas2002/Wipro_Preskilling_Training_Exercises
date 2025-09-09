@@ -19,23 +19,13 @@ export class Login {
   onLogin() {
     this.userService.login(this.credentials).subscribe({
       next: (res: Token) => {
-
         console.log("JWT Token:", res.token);
         this.userService.saveToken(res.token);
 
-
-        // Decode the token
         const decoded = this.userService.decodeToken();
-
-        if (decoded) {
-          if (decoded.role === "ROLE_ADMIN") {
-            this.router.navigate(['/products']);
-          } else {
-            this.router.navigate(['/user-dashboard']);
-          }
-        } else {
-          this.router.navigate(['/login']); // fallback if decode fails
-        }
+        const role = decoded?.role ?? '';
+        // Admin -> /products (admin list), Customer -> /user-dashboard
+        this.router.navigate([role === 'ROLE_ADMIN' ? '/products' : '/user-dashboard']);
       },
       error: () => alert('Login Failed!')
     });

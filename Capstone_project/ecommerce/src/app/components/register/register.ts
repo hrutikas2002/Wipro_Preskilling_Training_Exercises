@@ -18,7 +18,7 @@ export class Register {
     userId: '',
     passWord: '',
     address: '',
-    userType: 0
+    userType: 1
   };
 
   constructor(private userService: UserServices) {}

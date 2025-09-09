@@ -1,5 +1,7 @@
 export interface DecodedToken {
-  sub: string; // usually the username
-  role: string; // roles inside token (USER, ADMIN)
-  exp: number;
+  sub: string;      // username like "rutika24"
+  role?: string;
+  id?: number;      // <-- numeric user id from JWT
+  exp?: number;
+  iat?: number;
 }

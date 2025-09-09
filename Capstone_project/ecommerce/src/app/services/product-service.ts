@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductService {
-  private baseUrl = 'http://localhost:9191/products';
+  private baseUrl = 'http://localhost:9191/product';
 
   constructor(private http: HttpClient) {}
 
@@ -25,5 +25,20 @@ export class ProductService {
 
   deleteProduct(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
+  }
+
+  findProduct(id: string): Observable<IProduct> {
+    let url: string = `${this.baseUrl}/${id}`;
+    return this.http.get<IProduct>(url);
+  }
+
+  saveProduct(product: IProduct): Observable<IProduct> {
+    let url: string = `${this.baseUrl}/${product.id}`;
+    return this.http.put<IProduct>(url, product);
+  }
+
+  // convenience to map productId -> product in cart page
+  getProductById(id: number): Observable<IProduct> {
+    return this.http.get<IProduct>(`${this.baseUrl}/${id}`);
   }
 }

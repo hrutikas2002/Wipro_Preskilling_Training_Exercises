@@ -1,39 +1,47 @@
 package com.wipro.ecom.util;
 
+import java.nio.charset.StandardCharsets;
+import java.security.Key;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.springframework.stereotype.Component;
-
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;          // <-- important import for 0.11.5
+import io.jsonwebtoken.security.Keys;
 
-@Component
 public class JwtUtil {
-	public String generateToken(String userId, int userType) {
+
+	private Key key() {
+		// SECRET_KEY must be >= 32 bytes for HS256
+		return Keys.hmacShaKeyFor(AppConstant.SECRET_KEY.getBytes(StandardCharsets.UTF_8));
+	}
+
+	public String generateToken(String userId, int userType, int id) {
+		String role = (userType == 0) ? "ROLE_ADMIN" : "ROLE_CUSTOMER";
+		Map<String, Object> claims = new HashMap<>();
+		claims.put("role", role);
+		claims.put("uid", id);
+
 		return Jwts.builder()
+				.setClaims(claims) 
 				.setSubject(userId)
-				.claim("role", userType == 0 ? "ROLE_ADMIN" : "ROLE_USER")
 				.setIssuedAt(new Date())
 				.setExpiration(new Date(System.currentTimeMillis() + AppConstant.EXPIRATION_TIME))
-				.signWith(io.jsonwebtoken.security.Keys.hmacShaKeyFor(AppConstant.SECRET_KEY.getBytes()))
+				.signWith(key(), SignatureAlgorithm.HS256) // <-- SignatureAlgorithm enum, not Jwts.SignatureAlgorithm
 				.compact();
 	}
 
-	public String extractUserId(String token) {
+	private Claims claims(String token) {
 		return Jwts.parserBuilder()
-				.setSigningKey(AppConstant.SECRET_KEY.getBytes())
+				.setSigningKey(key()) 
 				.build()
 				.parseClaimsJws(token)
-				.getBody()
-				.getSubject();
+				.getBody();
 	}
 
-	public String extractRole(String token) {
-		return Jwts.parserBuilder()
-				.setSigningKey(AppConstant.SECRET_KEY.getBytes())
-				.build()
-				.parseClaimsJws(token)
-				.getBody()
-				.get("role", String.class);
-	}
+	public String extractUserId(String token) { return claims(token).getSubject(); }
+	public String extractRole(String token)    { return claims(token).get("role", String.class); }
+	public Integer extractUid(String token)    { return claims(token).get("uid", Integer.class); }
 }
-

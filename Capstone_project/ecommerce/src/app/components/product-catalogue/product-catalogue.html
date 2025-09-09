@@ -1,0 +1,29 @@
+<div class="container my-4">
+  <!-- Search bar -->
+  <div class="d-flex mb-4 gap-2">
+    <input type="text" class="form-control" placeholder="Search category" [(ngModel)]="category">
+    <input type="text" class="form-control" placeholder="Search text" [(ngModel)]="searchText">
+    <button class="btn btn-primary" (click)="search()">Search</button>
+    <button class="btn btn-success" (click)="viewCart()">View Cart</button>
+  </div>
+
+  <!-- Product cards grid -->
+  <div class="row">
+    @for (product of products; track product.id) {
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img [src]="product.imageURL" class="card-img-top" alt="{{ product.prodName }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.prodName }}</h5>
+          <p class="card-text">{{ product.prodDesc }}</p>
+          <p class="fw-bold text-primary">₹{{ product.price }}</p>
+          <button class="btn btn-outline-primary w-100" (click)="addToCart(product.id!, 1)">
+            Add to cart
+          </button>
+
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

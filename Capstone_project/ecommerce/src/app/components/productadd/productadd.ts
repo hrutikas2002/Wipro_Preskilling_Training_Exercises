@@ -28,6 +28,7 @@ export class Productadd {
 
   addProduct() {
     this.productService.addProduct(this.product).subscribe(() => {
+      window.alert("Product Added!")
       this.router.navigate(['/products']);
     })
 }

@@ -1,1 +1,132 @@
-<p>productupdate works!</p>
+<h2 class="text-center my-3">Save Product</h2>
+
+<div class="container">
+  <form (ngSubmit)="saveProduct()" class="card p-4 shadow-sm">
+    <div class="mb-3">
+      <label for="prodName" class="form-label">Product Name</label>
+      <input 
+        id="prodName"
+        name="prodName"
+        [(ngModel)]="product.prodName"
+        type="text"
+        class="form-control"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label for="prodDesc" class="form-label">Description</label>
+      <input 
+        id="prodDesc"
+        name="prodDesc"
+        [(ngModel)]="product.prodDesc"
+        type="text"
+        class="form-control"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label for="prodCat" class="form-label">Category</label>
+      <input 
+        id="prodCat"
+        name="prodCat"
+        [(ngModel)]="product.prodCat"
+        type="text"
+        class="form-control"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label for="make" class="form-label">Make</label>
+      <input 
+        id="make"
+        name="make"
+        [(ngModel)]="product.make"
+        type="text"
+        class="form-control"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label for="availableQty" class="form-label">Available Quantity</label>
+      <input 
+        id="availableQty"
+        name="availableQty"
+        [(ngModel)]="product.availableQty"
+        type="number"
+        class="form-control"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input 
+        id="price"
+        name="price"
+        [(ngModel)]="product.price"
+        type="number"
+        class="form-control"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label for="uom" class="form-label">Unit of Measurement</label>
+      <input 
+        id="uom"
+        name="uom"
+        [(ngModel)]="product.uom"
+        type="text"
+        class="form-control"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label for="prodRating" class="form-label">Rating</label>
+      <input 
+        id="prodRating"
+        name="prodRating"
+        [(ngModel)]="product.prodRating"
+        type="number"
+        step="0.1"
+        class="form-control"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label for="imageURL" class="form-label">Image URL</label>
+      <input 
+        id="imageURL"
+        name="imageURL"
+        [(ngModel)]="product.imageURL"
+        type="text"
+        class="form-control"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label for="dateOfManufacture" class="form-label">Date of Manufacture</label>
+      <input 
+        id="dateOfManufacture"
+        name="dateOfManufacture"
+        [(ngModel)]="product.dateOfManufacture"
+        type="date"
+        class="form-control"
+        required>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary w-50">💾 Save Product</button>
+    </div>
+  </form>
+
+  @if (message) {
+    <div class="alert alert-success mt-3 text-center">
+      {{ message }}
+    </div>
+  }
+
+  @if (errorMessage) {
+    <div class="alert alert-danger mt-3 text-center">
+      {{ errorMessage }}
+    </div>
+  }
+</div>

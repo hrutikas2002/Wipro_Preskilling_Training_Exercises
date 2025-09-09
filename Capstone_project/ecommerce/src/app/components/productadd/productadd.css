@@ -1,0 +1,14 @@
+form {
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+button {
+  width: 200px;
+}

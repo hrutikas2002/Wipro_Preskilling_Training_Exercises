@@ -1,0 +1,48 @@
+<h2>Shopping Cart</h2>
+
+<div *ngIf="message" class="alert alert-info">{{ message }}</div>
+
+<!-- Use entries.length instead of cart.totalQty (now computed on client) -->
+<div *ngIf="entries.length > 0; else emptyCart">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price (₹)</th>
+        <th style="width:140px">Qty</th>
+        <th>Line Total (₹)</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of entries; trackBy: trackById">
+        <td>
+          <div class="fw-semibold">{{ e.product?.prodName || ('#' + e.productId) }}</div>
+          <div class="text-muted small">{{ e.product?.prodDesc }}</div>
+        </td>
+        <td>{{ e.product?.price ?? '—' }}</td>
+        <td>
+          <div class="input-group">
+            <input type="number" min="1" class="form-control" [(ngModel)]="e.qty" (change)="onQtyChange(e)" />
+            <button class="btn btn-outline-secondary" (click)="applyQty(e)">Update</button>
+          </div>
+        </td>
+        <td>{{ ((e.product?.price || 0) * e.qty) | number:'1.2-2' }}</td>
+        <!-- ✅ remove by itemId -->
+        <td><button class="btn btn-link text-danger" (click)="remove(e.itemId)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="fs-5">
+      <strong>Subtotal:</strong> ₹{{ subtotal | number:'1.2-2' }}
+      <span class="ms-3">Items: {{ totalQty }}</span>
+    </div>
+    <button class="btn btn-primary" (click)="proceedToBuy()">Proceed to Buy</button>
+  </div>
+</div>
+
+<ng-template #emptyCart>
+  <p>🛍️ Your cart is empty</p>
+</ng-template>

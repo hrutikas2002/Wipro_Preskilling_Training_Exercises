@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService{
             if (passwordEncoder.matches(password, user.getPassWord())) {
                 user.setLoggedIn(true);
                 userRepository.save(user);
-                return jwtUtil.generateToken(user.getUserId(), user.getUserType());
+                return jwtUtil.generateToken(user.getUserId(), user.getUserType(),user.getId());
             } else {
                 throw new RuntimeException("Invalid password");
             }

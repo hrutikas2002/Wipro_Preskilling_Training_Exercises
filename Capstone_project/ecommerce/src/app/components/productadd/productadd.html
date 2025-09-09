@@ -1,14 +1,61 @@
-<h2>Add Product</h2>
-<form (ngSubmit)="addProduct()">
-  <input [(ngModel)]="product.prodName" name="prodName" placeholder="Product Name" required>
-  <input [(ngModel)]="product.prodDesc" name="prodDesc" placeholder="Description" required>
-  <input [(ngModel)]="product.prodCat" name="prodCat" placeholder="Category" required>
-  <input [(ngModel)]="product.make" name="make" placeholder="Make" required>
-  <input type="number" [(ngModel)]="product.availableQty" name="availableQty" placeholder="Available Quantity" required>
-  <input type="number" [(ngModel)]="product.price" name="price" placeholder="Price" required>
-  <input [(ngModel)]="product.uom" name="uom" placeholder="Unit of Measurement" required>
-  <input type="number" [(ngModel)]="product.prodRating" name="prodRating" placeholder="Rating" step="0.1" required>
-  <input [(ngModel)]="product.imageURL" name="imageURL" placeholder="Image URL" required>
-  <input type="date" [(ngModel)]="product.dateOfManufacture" name="dateOfManufacture" placeholder="Date of Manufacture" required>
-  <button type="submit">Add Product</button>
-</form>
+<h2 class="text-center my-3">Add Product</h2>
+
+<div class="container">
+  <form (ngSubmit)="addProduct()" class="card p-4 shadow-sm">
+    <div class="mb-3">
+      <label class="form-label">Product Name</label>
+      <input [(ngModel)]="product.prodName" name="prodName" class="form-control" placeholder="Product Name" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <input [(ngModel)]="product.prodDesc" name="prodDesc" class="form-control" placeholder="Description" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Category</label>
+      <input [(ngModel)]="product.prodCat" name="prodCat" class="form-control" placeholder="Category" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Make</label>
+      <input [(ngModel)]="product.make" name="make" class="form-control" placeholder="Make" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Available Quantity</label>
+      <input type="number" [(ngModel)]="product.availableQty" name="availableQty" class="form-control"
+        placeholder="Available Quantity" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Price</label>
+      <input type="number" [(ngModel)]="product.price" name="price" class="form-control" placeholder="Price" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Unit of Measurement</label>
+      <input [(ngModel)]="product.uom" name="uom" class="form-control" placeholder="Unit of Measurement" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Rating</label>
+      <input type="number" [(ngModel)]="product.prodRating" name="prodRating" class="form-control"
+        placeholder="Rating" step="0.1" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Image URL</label>
+      <input [(ngModel)]="product.imageURL" name="imageURL" class="form-control" placeholder="Image URL" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Date of Manufacture</label>
+      <input type="date" [(ngModel)]="product.dateOfManufacture" name="dateOfManufacture" class="form-control" required>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-success">✅ Add Product</button>
+    </div>
+  </form>
+</div>

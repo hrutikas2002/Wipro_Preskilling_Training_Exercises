@@ -6,13 +6,12 @@ import { DecodedToken } from '../interfaces/decoded-token';
 import { jwtDecode } from 'jwt-decode';
 import { Token } from '../interfaces/token';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class UserServices {
-  private baseUrl = 'http://localhost:9191/user'; // backend API
+type JwtPayload = { sub?: string; uid?: number; role?: string; exp?: number; iat?: number };
 
-  
+@Injectable({ providedIn: 'root' })
+export class UserServices {
+  private baseUrl = 'http://localhost:9191/user'; // gateway
+
   constructor(private http: HttpClient, private router: Router) {}
 
   register(user: any): Observable<any> {
@@ -23,35 +22,43 @@ export class UserServices {
     return this.http.post<Token>(`${this.baseUrl}/login`, credentials);
   }
 
+  /** Save token under a single, consistent key: 'token'. Also keep 'jwtToken' for backward compatibility. */
   saveToken(token: string) {
-    localStorage.setItem('jwtToken', token);
-
-    // Decode and store userId separately for easy access
-    const decoded = jwtDecode<DecodedToken>(token);
-    if (decoded && decoded.sub) {
-      localStorage.setItem('userId', decoded.sub);
-    }
+    localStorage.setItem('token', token);
+    localStorage.setItem('jwtToken', token); // compat with any old code
+    try {
+      const decoded = jwtDecode<JwtPayload>(token);
+      if (decoded?.sub) localStorage.setItem('userId', decoded.sub);
+      if (decoded?.uid != null) localStorage.setItem('numericUserId', String(decoded.uid)); // <-- uid (not id)
+      if (decoded?.role) localStorage.setItem('role', decoded.role);
+    } catch { /* ignore */ }
   }
 
-  getToken() {
-    return localStorage.getItem('jwtToken');
+  getToken(): string | null {
+    return localStorage.getItem('token') || localStorage.getItem('jwtToken');
   }
 
-  decodeToken(): DecodedToken | null {
+  decodeToken(): JwtPayload | null {
     const token = this.getToken();
-    return token ? jwtDecode<DecodedToken>(token) : null;
+    try { return token ? jwtDecode<JwtPayload>(token) : null; } catch { return null; }
   }
 
-  isLoggedIn(): boolean {
-    return !!this.getToken();
-  }
+  isLoggedIn(): boolean { return !!this.getToken(); }
 
   logout() {
-    localStorage.removeItem('jwtToken'); // fixed key
-    localStorage.removeItem('userId');   // also clear userId
+    localStorage.removeItem('token');
+    localStorage.removeItem('jwtToken');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('numericUserId');
+    localStorage.removeItem('role');
   }
 
-  getUserId(): string | null {
-    return localStorage.getItem('userId');
+  getUserId(): string | null { return localStorage.getItem('userId'); }
+
+  getNumericUserId(): number | null {
+    const v = localStorage.getItem('numericUserId');
+    if (!v) return null;
+    const n = Number(v);
+    return Number.isFinite(n) ? n : null;
   }
 }
